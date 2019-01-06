@@ -2,7 +2,7 @@ var Parse = {
 
     server: `http://parse.${window.CAMPUS}.hackreactor.com/chatterbox/classes/messages`,
   
-    create: function(successCB, message) {
+    create: function(message) {
       // todo: save a message to the server
       // var escapedMessage = _.template('<%-message%>');
       // console.log(escapedMessage);
@@ -13,10 +13,10 @@ var Parse = {
         type: 'POST',
         data: JSON.stringify(message),
         contentType: 'application/json',
-        success: Parse.readAll(),
-        // function (data) {
-        //   console.log('chatterbox: Message sent', data);
-        // },
+        success: function (data) {
+          console.log('chatterbox: Message sent');
+        },
+        // Parse.readAll(),
         error: function (data) {
           // See: https://developer.mozilla.org/en-US/docs/Web/API/console.error
           console.error('chatterbox: Failed to send message', data);
@@ -28,7 +28,7 @@ var Parse = {
       $.ajax({
         url: Parse.server,
         type: 'GET',
-        data: { order: '-createdAt', limit: 10},
+        data: { order: '-createdAt'},
         contentType: 'application/json',
         success: successCB,
         error: errorCB || function(error) {

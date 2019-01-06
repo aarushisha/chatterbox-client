@@ -4,7 +4,7 @@ var RoomsView = {
   $select: $('#rooms select'),
 
   initialize: function() {
-    RoomsView.$rooms
+  
   },
 
   render: function() {

@@ -3,6 +3,7 @@ var MessagesView = {
   $chats: $('#chats'),
 
   initialize: function() {
+    Parse.readAll();
   },
 
   render: function(messagesArray) {
