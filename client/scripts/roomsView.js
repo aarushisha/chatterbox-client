@@ -8,6 +8,9 @@ var RoomsView = {
   },
 
   render: function() {
+    $button.click(function(){
+      $("#rooms").append('<option value="' + $("#newRoom").val() + '">' + $("#newRoom").val() + '</option>');
+      })
   }
 
 };

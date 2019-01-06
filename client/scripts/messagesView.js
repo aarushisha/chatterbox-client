@@ -3,7 +3,6 @@ var MessagesView = {
   $chats: $('#chats'),
 
   initialize: function() {
-    Parse.readAll();
   },
 
   render: function(messagesArray) {
@@ -20,6 +19,10 @@ var MessagesView = {
     var compiled = MessageView.render(message);
     console.log(compiled);
     $("#chats").append(compiled);
-  }
+  },
+
+  refresh: $('#refresh').click(function() {
+    location.reload();
+ })
 
 };

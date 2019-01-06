@@ -12,7 +12,7 @@ var FormView = {
     console.log($message.val());
     event.preventDefault();
     Parse.create({username: App.username, roomname: "", text: $message.val()});
-    MessagesView.initialize();
+    // location.reload();
     console.log('click!');
   },
 
