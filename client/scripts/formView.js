@@ -12,6 +12,7 @@ var FormView = {
     console.log($message.val());
     event.preventDefault();
     Parse.create(MessagesView.renderMessage, {username: App.username, roomname: "", text: $message.val()});
+    App.initialize();
     
     console.log('click!');
   },
