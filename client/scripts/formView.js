@@ -13,7 +13,15 @@ var FormView = {
     console.log($message.val());
     event.preventDefault();
     Parse.create({username: App.username, roomname: $('#rooms select :selected').text(), text: $message.val()});
+    // App.fetch();
+    // $('#chats').load(' #chats');
     // location.reload();
+    // Parse.readAll((data) => {
+    //   // examine the response from the server request:
+    //   console.log(data);
+    //   MessagesView.render(data.results);
+    // };
+
     console.log('click!');
   },
 

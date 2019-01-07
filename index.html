@@ -28,7 +28,7 @@
       <div id="rooms">
         Room:
         <select>
-          <option value="None" selected>None</option>
+          <option value="Lobby" selected>Lobby</option>
         </select>
         <input type="text" name="addRoom" id="addRoom"/>
         <button>Add Room</button>
@@ -37,9 +37,12 @@
         <input type="text" name="message" id="message"/>
         <input type="submit" name="submit" class="submit"/>
       </form>
+      <button id="refresh">Refresh</button>
     </div>
-    <div id="chats"></div>
-    <button id="refresh">Refresh</button>
+    <div id="wrapper">
+    <div id="chats">
+    </div>
+  </div>
     <script src="client/env/config.js"></script>
     <script src="client/scripts/parse.js"></script>
     <script src="client/scripts/rooms.js"></script>
