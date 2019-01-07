@@ -9,9 +9,10 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     var $message = $('#message');
+    var $select = $('#rooms select');
     console.log($message.val());
     event.preventDefault();
-    Parse.create({username: App.username, roomname: "", text: $message.val()});
+    Parse.create({username: App.username, roomname: $('#rooms select :selected').text(), text: $message.val()});
     // location.reload();
     console.log('click!');
   },
