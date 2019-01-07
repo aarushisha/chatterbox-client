@@ -13,6 +13,8 @@ var FormView = {
     console.log($message.val());
     event.preventDefault();
     Parse.create({username: App.username, roomname: $('#rooms select :selected').text(), text: $message.val()});
+    $('#chats').empty();
+    App.fetch();
     // App.fetch();
     // $('#chats').load(' #chats');
     // location.reload();
