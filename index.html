@@ -25,11 +25,13 @@
     <div id="main">
       <h1>chatterbox</h1>
       <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
-      <button id="refresh">Refresh</button>
       <div id="rooms">
         Room:
-        <select></select>
-        <button id="room-select">Add Room</button>
+        <select>
+          <option value="None" selected>None</option>
+        </select>
+        <input type="text" name="addRoom" id="addRoom"/>
+        <button>Add Room</button>
       </div>
       <form action="#" id="send" method="post">
         <input type="text" name="message" id="message"/>
@@ -37,6 +39,7 @@
       </form>
     </div>
     <div id="chats"></div>
+    <button id="refresh">Refresh</button>
     <script src="client/env/config.js"></script>
     <script src="client/scripts/parse.js"></script>
     <script src="client/scripts/rooms.js"></script>

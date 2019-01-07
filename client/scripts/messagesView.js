@@ -21,8 +21,13 @@ var MessagesView = {
     $("#chats").append(compiled);
   },
 
-  refresh: $('#refresh').click(function() {
+  // refresh: $('#refresh').click(function() {
+    refresh: $("#refresh").on('click', function() {
     location.reload();
+    // // MessagesView.render(data.results);
+    // console.log("running refresh");
+    // event.preventDefault();
+    // Parse.readAll();
  })
 
 };

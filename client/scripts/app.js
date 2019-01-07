@@ -23,6 +23,7 @@ var App = {
       // examine the response from the server request:
       console.log(data);
       MessagesView.render(data.results);
+      RoomsView.render(RoomsView.allRooms);
 
       callback();
     });
