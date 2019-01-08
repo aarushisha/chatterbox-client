@@ -13,6 +13,7 @@ var MessagesView = {
         MessagesView.renderMessage(messagesArray[i]);
      }
    }
+
   },
 
   renderMessage: function(message) {
@@ -23,14 +24,17 @@ var MessagesView = {
 
 //   // refresh: $('#refresh').click(function() {
     refresh: $("#refresh").on('click', function() {
-    // location.reload();
-    // $( "#chats" ).load( "/rpt12-chatterbox-client/index.html" );
-    // $("#chats").load(location.href + " #chats")
-    // $('#chats').load(' #chats');
-    // // MessagesView.render(data.results);
-    // console.log("running refresh");
-    // event.preventDefault();
     $('#chats').empty();
     App.fetch();
+  }),
+
+  roomSelect: $('#rooms select').change(function()  {
+    //selecting an option, you want to clear all chats 
+    //only render chats that show that selected?
+    console.log($('#rooms select :selected').text());
+    console.log(messagesArray[i].roomname);
+    // if ($('#rooms select :selected').text() !== messagesArray[i].roomname) {
+      // $('#chats').empty();
+    // }
   })
 };
