@@ -28,14 +28,27 @@ var Parse = {
     $.ajax({
       url: Parse.server,
       type: 'GET',
-      data: { order: '-createdAt', limit: 10},
+      data: { order: '-createdAt', limit: 0},
       contentType: 'application/json',
       success: successCB,
       error: errorCB || function(error) {
         console.error('chatterbox: Failed to fetch messages', error);
       }
     });
-  }
+  },
+
+  // readAllByRoomName: function(roomname, successCB, errorCB = null) {
+  //   $.ajax({
+  //     url: Parse.server,
+  //     type: 'GET',
+  //     data: { order: '-createdAt', limit: 20},
+  //     contentType: 'application/json',
+  //     success: successCB,
+  //     error: errorCB || function(error) {
+  //       console.error('chatterbox: Failed to fetch messages', error);
+  //     }
+  //   });
+
 
 
 };

@@ -22,7 +22,16 @@ var App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);
-      MessagesView.render(data.results);
+      var roomMessages = [];
+      for (var i = 0; i < data.results.length; i++) {
+        if ($('#rooms select :selected') === data.results[i].roomname) {
+          roomMessages.push(data.results[i]);
+        }
+      }
+     //$('#rooms select :selected') === data.results[i].roomname 
+     //compare it too data.results[i].roomname 
+
+      MessagesView.render(roomMessages);
 
       callback();
     });

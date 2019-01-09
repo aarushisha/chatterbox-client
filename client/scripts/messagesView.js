@@ -28,13 +28,13 @@ var MessagesView = {
     App.fetch();
   }),
 
-  roomSelect: $('#rooms select').change(function()  {
-    //selecting an option, you want to clear all chats 
-    //only render chats that show that selected?
-    console.log($('#rooms select :selected').text());
-    console.log(messagesArray[i].roomname);
-    // if ($('#rooms select :selected').text() !== messagesArray[i].roomname) {
-      // $('#chats').empty();
-    // }
-  })
+  // roomSelect: $('select[name="dropdown"]').change(function()  {
+  //   //selecting an option, you want to clear all chats 
+  //   //only render chats that show that selected?
+  //   console.log($('#rooms select :selected').text());
+  //   alert('You are now entering ' + $('#rooms select :selected').text() + '!');
+  //   $('#chats').empty();
+  //   Parse.readAll(//callback here filter and then render)
+    
+  // })
 };
