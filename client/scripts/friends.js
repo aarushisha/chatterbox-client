@@ -1,24 +1,28 @@
 var Friends = {
 
-  _data: new Set,
+  // _data: new Set,
 
-  items: function() {
-    //chain returns a wrapped object
-    return _.chain([...Friends._data]);
-  },
+  // items: function() {
+  //   //chain returns a wrapped object
+  //   return _.chain([...Friends._data]);
+  // },
 
-  isFriend: function(name) {
-    return Friends._data.has(name);
-  },
+  // isFriend: function(name) {
+  //   return Friends._data.has(name);
+  // },
 
-  toggleStatus: function(name, callback = ()=>{}) {
-    if (Friends._data.has(name)) {
-      Friends._data.delete(name);
-      callback(false);
-    } else {
-      Friends._data.add(name);
-      callback(true);
-    }
+  // toggleStatus: function(name, callback = ()=>{}) {
+  //   if (Friends._data.has(name)) {
+  //     Friends._data.delete(name);
+  //     callback(false);
+  //   } else {
+  //     Friends._data.add(name);
+  //     callback(true);
+  //   }
+  // }
+
+  toggleStatus: function() {
+    
   }
 
 

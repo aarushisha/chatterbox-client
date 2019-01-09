@@ -19,10 +19,12 @@ var RoomsView = {
 },
 
   renderRoom: function() {
+    console.log('hi from renderRoom');
     var $addRoom = $('#addRoom');
     console.log($addRoom);
     RoomsView.allRooms.push($addRoom.val());
     $('#rooms select').append('<option value="' + $addRoom.val()+ '">' + $addRoom.val() + '</option>');
+    Rooms.add($addRoom.val());
     //when you click 'add room', takes the $addRoom.val()
   },
 
