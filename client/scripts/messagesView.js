@@ -37,4 +37,12 @@ var MessagesView = {
   //   Parse.readAll(//callback here filter and then render)
     
   // })
+
+  handleClick: function(event) {
+    // Get username from data attribute
+    var username = $(event.target).data('username');
+    if (username === undefined) { return; }
+
+    Friends.toggleStatus(username, MessagesView.render);
+      }
 };

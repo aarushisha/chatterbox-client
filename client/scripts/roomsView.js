@@ -26,6 +26,11 @@ var RoomsView = {
     //when you click 'add room', takes the $addRoom.val()
   },
 
+  roomSelect: $('#rooms select').change(function() {
+    $('#chats').empty();
+    App.fetch();
+  })
+
 
 
 };
